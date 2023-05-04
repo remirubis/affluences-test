@@ -1,0 +1,9 @@
+build/
+dist/
+node_modules/
+coverage/
+
+.DS_Store
+
+*.mock.*
+!.storybook
