@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  app:
+    container_name: react-app
+    image: docker-react-dev
+    build:
+      dockerfile: docker/dev/Dockerfile.react.dev
+      context: .
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+       - ./app:/usr/src/app
+       - /usr/src/app/node_modules
