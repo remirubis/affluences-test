@@ -9,7 +9,6 @@ module.exports = {
   extends: [
     'react-app',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'standard-with-typescript',
     'prettier'
@@ -23,7 +22,6 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
     'autofix',
     'react-hooks',
     'jest-dom',
@@ -36,6 +34,7 @@ module.exports = {
     'no-shadow': 'off',
     'no-param-reassign': [2, { props: false }],
     'no-underscore-dangle': 'off',
+    'no-unmodified-loop-condition': 'off',
 
     'require-yield': 'off',
 
@@ -128,6 +127,7 @@ module.exports = {
         prefer: 'type-imports'
       }
     ],
+    '@typescript-eslint/no-misused-promises' : 'off',
 
     // Allow using `require()` instead of `import` (in scripts mostly).
     '@typescript-eslint/no-var-requires': 'off',
@@ -174,6 +174,7 @@ module.exports = {
 
     // We allow the empty interface for example the ones which are just alias
     '@typescript-eslint/no-empty-interface': 'off',
+    'typescript-eslint/restrict-template-expressions': 'off',
 
     // We don't really care whether empty functions are declared with a regular
     // function syntax, or with an arrow function one.
